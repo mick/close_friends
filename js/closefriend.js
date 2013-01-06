@@ -17,7 +17,7 @@ var cf = {
 	     
 		console.log("INIT");
 		cf.watchLocation();
-		//setInterval(cf.recentCheckins,60000);
+		setInterval(cf.recentCheckins,5000);
 		
 		$("div.makecall").on("click", function(){
 			cf.makeCall();
@@ -45,33 +45,19 @@ var cf = {
 		
 	},
 	sendSMS:function(){
-		console.log("IN SEND SMS");
-		var url = "https://api.att.com/rest/sms/2/messaging/outbox";
-		var data = {
-			    "Message":"on my way",
-			    "Address":"tel:5059206781" 
-			};
-		$.ajax(url, {type:"POST", 
-				headers:{"Authorization":"Bearer "+cf.att_access, "Content-Type":"application/json", "Accept": "application/json"}, 
-				data:JSON.stringify(data),
+		$.ajax("http://localhost:3005/sms", {
 				success:function(data){
 					console.log("sent txt", data);
 				}});
 		
 	},
 	makeCall:function(){
-		var url = "https://api.att.com/rest/sms/2/messaging/outbox";
-		var data = {
-			    "Message":"a", 
-			    "Address":"tel:5059206781" 
-			};
-		$.ajax(url, {type:"POST", 
-				headers:{"Authorization":"Bearer "+cf.att_access, "Content-Type":"application/json", "Accept": "application/json"}, 
-				data:JSON.stringify(data),
-				success:function(data){
-					console.log("sent txt", data);
-				}});
 		
+		$.ajax("http://localhost:3005/sms", {
+			success:function(data){
+				console.log("sent txt", data);
+
+			}});		
 	},
 	recentCheckins:function(){
 		
