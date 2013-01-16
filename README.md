@@ -6,4 +6,6 @@ Close Friends uses your car to notify and guide you to meet with friends who hap
 - GM SDK- GM Navigation- GM Alerts- GM Location- SMS- Foursquare API
 ###Features
 - Browse nearby friends- Get notified of nearby friends- Navigate to location- Sms from app
-
+###Example
+![screen1](s/ex1.png)
+![screen2](s/ex2.png)
