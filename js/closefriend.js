@@ -1,7 +1,7 @@
 var cf = {
-	att_access:"939af17dd3b89136fecb25acd3236efb",
-	access_token:"KLGGOIXSKQFH0RWDPW5UIKI1HZUP4533D31SUA4GKZ5YVPBB",
-	clientID:"GITUUR0NOFQTYQ54NHGBGZSNXC1RZ4SQ0AODF0PV5QKVJTXC",
+	att_access:"###",
+	access_token:"###",
+	clientID:"###",
 	mostRecent:0,
 	friends:[],
 	init:function(){
